@@ -10,18 +10,30 @@ var cards = [
 
 var cardsInPlay = [];
 
-var cardOne = cards[0];
-cardsInPlay.push(cardOne);
 
-var cardTwo = cards[1];
-cardsInPlay.push(cardTwo);
 
-if (cardsInPlay.length === 2) {
+var flipCard = function( cardId ) {
 
-   if (cardsInPlay[0] === cardsInPlay[1]) {
-      alert("Match!");
-   } else {
-      alert("Sorry, try again.");
+
+   cardsInPlay.push(cards[cardId]);
+
+   console.log("User flipped "+cards[cardId]);
+};
+
+var checkForMatch = function() {
+   if (cardsInPlay.length === 2) {
+
+      if (cardsInPlay[0] === cardsInPlay[1]) {
+         alert("Match!");
+      } else {
+         alert("Sorry, try again.");
+      }
+
    }
+};
 
-}
+
+
+flipCard(0);
+flipCard(2);
+checkForMatch();
