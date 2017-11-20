@@ -101,7 +101,7 @@ footer {
 
 .message {
    font-family: "Raleway";
-   float: right;
+   float: left;
 }
 
 .clearfix:after {
